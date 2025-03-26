@@ -62,7 +62,7 @@ void * lastList(List * list) {
 }
 
 void * prevList(List * list) {
-        if (list->current != NULL)
+    if (list->current != NULL)
         list->current = list->current->prev;
     
     if (list->current != NULL)
@@ -77,14 +77,14 @@ void pushFront(List * list, void * data) {
     newNode->prev = NULL;
     newNode->next = list->head;
     
-    list->head = newNode;
-    list->head->prev = newNode;
+    //list->head = newNode;
+    //list->head->prev = newNode;
 
 
     if (list->head != NULL) 
         list->head->prev = newNode;
-    
-    list->head = newNode;
+
+    list->tail = newNode;
     list->tail ++;
 }
 
