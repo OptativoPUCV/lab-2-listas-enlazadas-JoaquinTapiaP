@@ -133,9 +133,9 @@ void * popCurrent(List * list) {
     derecha->prev = izquierda;
     
 
-    free(list->current);
     
-    return NULL;
+    
+    return list->current->data;
 }
 
 void cleanList(List * list) {
