@@ -136,7 +136,11 @@ void * popCurrent(List * list) {
     }
 
     
-    derecha->prev = izquierda;
+    if (derecha == NULL) {
+        list->tail = izquierda;
+    } else {
+        derecha->prev = izquierda;
+    }
     
 
     
