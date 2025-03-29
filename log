@@ -172,3 +172,20 @@ Sat, Mar 29, 2025 11:59:37 AM:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 877024a
+Sat, Mar 29, 2025 12:00:19 PM: 
+ list.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+list.c: In function 'popCurrent':
+list.c:146:10: error: variable or field 'data' declared void
+     void data = list->current->data;
+          ^~~~
+list.c:146:17: error: initialization makes integer from pointer without a cast [-Werror=int-conversion]
+     void data = list->current->data;
+                 ^~~~
+list.c:149:12: error: return makes pointer from integer without a cast [-Werror=int-conversion]
+     return data;
+            ^~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+690343a
